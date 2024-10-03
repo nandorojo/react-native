@@ -28,6 +28,8 @@ export type PackagerAsset = {
 
 const assets: Array<PackagerAsset> = [];
 
+globalThis.__react_native_asset_registry = []
+
 function registerAsset(asset: PackagerAsset): number {
   // `push` returns new array length, so the first asset will
   // get id 1 (not 0) to make the value truthy
